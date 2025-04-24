@@ -1,103 +1,92 @@
-import Image from "next/image";
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { ModeToggle } from './components/ModeToggle';
+import { FaFileDownload } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { IoIosMail } from 'react-icons/io';
+// import { FaHtml5 } from 'react-icons/fa';
+// import { SiCsswizardry } from 'react-icons/si';
+import { SiTypescript } from 'react-icons/si';
+import { FaReact } from 'react-icons/fa';
+import { RiNextjsFill } from 'react-icons/ri';
+import { RiTailwindCssFill } from 'react-icons/ri';
+import Headshot from '@/assets/headshot.jpg';
+
+const SOCIALS_SIZE = 25;
+const TECH_SIZE = 25;
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col gap-10 relative mx-auto mt-6 max-w-xl">
+      <div>
+        <div className="flex justify-between items-center mb-10 ">
+          <span className="text-2xl font-semibold">BG</span>
+          <div className="flex justify-between items-center w-1/2">
+            <span>about</span>
+            <span>projects</span>
+            <span>contact</span>
+            <ModeToggle />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="flex gap-8 justify-between">
+          <div>
+            <h1 className="text-4xl font-semibold pb-4">
+              Hi Hi, I{`'`}m Brandon 👋
+            </h1>
+            <div className="pb-2">
+              31-year-old software developer from San Jose, CA
+            </div>
+            <div className="pb-4">
+              I like to build interactive front-end apps, play the piano, and
+              drink coffee
+            </div>
+            <div className="font-semibold">Available for work </div>
+            <div className="flex items-center gap-8 mt-10 ">
+              <Button>
+                Resume <FaFileDownload />
+              </Button>
+              <div className="flex gap-6">
+                <FaLinkedin size={SOCIALS_SIZE} />
+                <FaGithub size={SOCIALS_SIZE} />
+                <IoIosMail size={SOCIALS_SIZE} />
+              </div>
+            </div>
+          </div>
+
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={Headshot}
+            alt="headshot"
+            className="w-36 h-36 rounded-full object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </div>
+      <div className="relative my-6 grid  grid-cols-4 gap-2  ">
+        <div className="flex flex-col items-center justify-center border py-3 rounded-2xl">
+          <RiTailwindCssFill size={TECH_SIZE} />
+
+          <div className="mt-2 ">Tailwind CSS</div>
+        </div>
+        <div className="flex flex-col items-center justify-center border  rounded-2xl">
+          <SiTypescript size={TECH_SIZE} />
+          <div className="mt-2">Typescript</div>
+        </div>
+        <div className="flex flex-col items-center justify-center border rounded-2xl">
+          <FaReact size={TECH_SIZE} />
+          <div className="mt-2">React.js</div>
+        </div>
+        <div className="flex flex-col items-center justify-center border  rounded-2xl">
+          <RiNextjsFill size={TECH_SIZE} />
+          <div className="mt-2">Next.js</div>
+        </div>
+      </div>
+      <div className="flex text-center gap-1 rounded-xl p-2">
+        <Button className="w-1/2 rounded-xl">Work </Button>
+        <Button className="w-1/2 rounded-xl bg-none" variant="outline">
+          Education
+        </Button>
+      </div>
+      <div className="border"></div>
     </div>
   );
 }
