@@ -12,6 +12,7 @@ import { FaReact } from 'react-icons/fa';
 import { RiNextjsFill } from 'react-icons/ri';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import Headshot from '@/assets/headshot.jpg';
+import WorkExperience from './components/WorkExperience';
 
 const SOCIALS_SIZE = 25;
 const TECH_SIZE = 25;
@@ -80,13 +81,7 @@ export default function Home() {
           <div className="mt-2">Next.js</div>
         </div>
       </div>
-      <div className="flex text-center gap-1 rounded-xl p-2">
-        <Button className="w-1/2 rounded-xl">Work </Button>
-        <Button className="w-1/2 rounded-xl bg-none" variant="outline">
-          Education
-        </Button>
-      </div>
-      <div className="border"></div>
+      <WorkExperience />
     </div>
   );
 }
