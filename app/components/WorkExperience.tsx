@@ -6,24 +6,18 @@ import JIF_Logo from '../../assets/JIF_Logo.jpg';
 import Shands_Logo from '../../assets/Shands.png';
 import Orchard from '../../assets/Orchard.jpg';
 import Seal_of_Santa_Fe_College from '../../assets/Seal_of_Santa_Fe_College.jpg';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from '@/components/ui/card';
 
 export default function WorkExperience() {
-  const [workBtn, setWorkBtn] = useState(true);
-  const [educBtn, setEducBtn] = useState(false);
-
-  function toggleWork() {
-    setWorkBtn(true);
-    setEducBtn(false);
-  }
-
-  function toggleEduc() {
-    setWorkBtn(false);
-    setEducBtn(true);
-  }
-
   function Work() {
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-6">
         <div className="flex gap-4">
           <Image
             src={JIF_Logo}
@@ -31,19 +25,22 @@ export default function WorkExperience() {
             className="w-12 h-12 rounded-full object-cover"
           />
           <div className="flex flex-col">
-            <div>Aug. 2021 - Present</div>
-            <div>JIF Reprographics</div>
-            <div>Reprographics Technician</div>
+            <CardDescription>Aug. 2021 - Present</CardDescription>
+            <CardTitle>JIF Reprographics - Reprographics Technician</CardTitle>
             <ul className="ml-4 list-outside list-disc">
               <li>
-                Perform a variety of technical duties in the operation of
-                high-speed printers and related reprographic equipment to
-                produce a wide variety of printed materials
+                <CardDescription>
+                  Perform a variety of technical duties in the operation of
+                  high-speed printers and related reprographic equipment to
+                  produce a wide variety of printed materials
+                </CardDescription>
               </li>
               <li>
-                Operate a variety of office equipment including a computer and
-                assigned software. Email, receive, log and scan reprographic
-                jobs into computers.
+                <CardDescription>
+                  Operate a variety of office equipment including a computer and
+                  assigned software. Email, receive, log and scan reprographic
+                  jobs into computers.
+                </CardDescription>
               </li>
             </ul>
           </div>
@@ -55,18 +52,23 @@ export default function WorkExperience() {
             className="w-12 h-12 rounded-full object-cover"
           />
           <div className="flex flex-col">
-            <div>Apr. 2015 - Apr. 2020</div>
-            <div>UF Health Shands Hospital</div>
-            <div>Support Technician</div>
+            <CardDescription>Apr. 2015 - Apr. 2020</CardDescription>
+            <CardTitle>
+              UF Health Shands Hospital - Support Technician
+            </CardTitle>
             <ul className="ml-4 list-outside list-disc">
               <li>
-                Optimized patient mobility by serving as a mobility assistant to
-                nursing staff.
+                <CardDescription>
+                  Optimized patient mobility by serving as a mobility assistant
+                  to nursing staff.
+                </CardDescription>
               </li>
               <li>
-                Supported unit as desk clerk managing nurse call system,
-                answering telephone stocking supplies, filing, and ensuring a
-                clean environment of care.
+                <CardDescription>
+                  Supported unit as desk clerk managing nurse call system,
+                  answering telephone stocking supplies, filing, and ensuring a
+                  clean environment of care.
+                </CardDescription>
               </li>
             </ul>
           </div>
@@ -78,17 +80,20 @@ export default function WorkExperience() {
             className="w-12 h-12 rounded-full object-cover"
           />
           <div className="flex flex-col">
-            <div>Oct. 2018 - Sept. 2019</div>
-            <div>Orchard Info Inc.</div>
-            <div>Front-End Developer</div>
+            <CardDescription>Oct. 2018 - Sept. 2019</CardDescription>
+            <CardTitle>Orchard Info Inc. - Front-End Developer</CardTitle>
             <ul className="ml-4 list-outside list-disc">
               <li>
-                Produced and updated responsive web pages from Figma mockup to
-                create a smooth user experience.
+                <CardDescription>
+                  Produced and updated responsive web pages from Figma mockup to
+                  create a smooth user experience.
+                </CardDescription>
               </li>
               <li>
-                Implemented job-application form for future employees to submit
-                their resumes and resulted in over 100 submissions.
+                <CardDescription>
+                  Implemented job-application form for future employees to
+                  submit their resumes and resulted in over 100 submissions.
+                </CardDescription>
               </li>
             </ul>
           </div>
@@ -107,9 +112,9 @@ export default function WorkExperience() {
             className="w-12 h-12 rounded-full object-cover"
           />
           <div className="flex flex-col">
-            <div>Dec. 2018</div>
-            <div>Santa Fe College</div>
-            <div>A.S. in Programming and Analysis</div>
+            <CardDescription>Dec. 2018</CardDescription>
+            <CardTitle>Santa Fe College</CardTitle>
+            <CardDescription>A.S. in Programming and Analysis</CardDescription>
           </div>
         </div>
       </div>
@@ -118,23 +123,26 @@ export default function WorkExperience() {
 
   return (
     <div>
-      <div className="flex text-center justify-between gap-1 rounded-xl p-2">
-        <Button
-          className="w-1/2 rounded-xl cursor-pointer"
-          variant={workBtn ? 'default' : 'secondary'}
-          onClick={toggleWork}
-        >
-          Work{' '}
-        </Button>
-        <Button
-          className="w-1/2 rounded-xl  cursor-pointer"
-          variant={educBtn ? 'default' : 'secondary'}
-          onClick={toggleEduc}
-        >
-          Education
-        </Button>
-      </div>
-      <div className="border rounded p-7">{workBtn ? <Work /> : <Educ />}</div>
+      <Tabs defaultValue="account" className="">
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="account">Work</TabsTrigger>
+          <TabsTrigger value="password">Education</TabsTrigger>
+        </TabsList>
+        <TabsContent value="account">
+          <Card>
+            <CardContent className="space-y-2">
+              <Work />
+            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="password">
+          <Card>
+            <CardContent className="space-y-2">
+              <Educ />
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
