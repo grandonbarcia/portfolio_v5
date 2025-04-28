@@ -11,6 +11,7 @@ import { SiTypescript } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
 import { RiNextjsFill } from 'react-icons/ri';
 import { RiTailwindCssFill } from 'react-icons/ri';
+import { PiCopyrightFill } from 'react-icons/pi';
 import Headshot from '@/assets/headshot.jpg';
 import WorkExperience from './components/WorkExperience';
 import Kanban from '@/assets/kanban.jpg';
@@ -110,6 +111,19 @@ export default function Home() {
               </CardDescription>
             </CardHeader>
           </Card>
+        </div>
+      </div>
+      <div className="border-t-2 pb-4">
+        <div className="flex justify-between  pt-4">
+          <div className="flex items-center">
+            <PiCopyrightFill />
+            BG
+          </div>
+          <div className="flex gap-6">
+            <FaLinkedin size={SOCIALS_SIZE} />
+            <FaGithub size={SOCIALS_SIZE} />
+            <IoIosMail size={SOCIALS_SIZE} />
+          </div>
         </div>
       </div>
     </div>
