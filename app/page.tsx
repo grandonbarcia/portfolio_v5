@@ -13,6 +13,15 @@ import { RiNextjsFill } from 'react-icons/ri';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import Headshot from '@/assets/headshot.jpg';
 import WorkExperience from './components/WorkExperience';
+import Kanban from '@/assets/kanban.jpg';
+import Memory from '@/assets/memory.jpg';
+
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 
 const SOCIALS_SIZE = 25;
 const TECH_SIZE = 25;
@@ -54,7 +63,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <Image
             src={Headshot}
             alt="headshot"
@@ -65,7 +73,6 @@ export default function Home() {
       <div className="relative my-6 grid  grid-cols-4 gap-2  ">
         <div className="flex flex-col items-center justify-center border py-3 rounded-2xl">
           <RiTailwindCssFill size={TECH_SIZE} />
-
           <div className="mt-2 ">Tailwind CSS</div>
         </div>
         <div className="flex flex-col items-center justify-center border  rounded-2xl">
@@ -82,6 +89,29 @@ export default function Home() {
         </div>
       </div>
       <WorkExperience />
+      <div>
+        <div className="text-3xl font-semibold mb-8">personal projects</div>
+        <div className="flex justify-between gap-4">
+          <Card className="w-1/2 shadow-md">
+            <CardHeader>
+              <Image src={Kanban} alt="Kanban" className=" " />
+              <CardTitle>Kanban Board</CardTitle>
+              <CardDescription>
+                Drag and drop your tasks to organize your work flow
+              </CardDescription>
+            </CardHeader>
+          </Card>
+          <Card className="w-1/2 shadow-md">
+            <CardHeader>
+              <Image src={Memory} alt="Memory" className=" " />
+              <CardTitle>Memory Game</CardTitle>
+              <CardDescription>
+                Test your memory solo or with friends
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 }
