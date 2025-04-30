@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ModeToggle } from './components/ModeToggle';
+import { Badge } from '@/components/ui/badge';
 import { FaFileDownload } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
@@ -12,6 +13,8 @@ import { FaReact } from 'react-icons/fa';
 import { RiNextjsFill } from 'react-icons/ri';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { PiCopyrightFill } from 'react-icons/pi';
+import { PiMonitor } from 'react-icons/pi';
+import { FiGithub } from 'react-icons/fi';
 import Headshot from '@/assets/headshot.jpg';
 import WorkExperience from './components/WorkExperience';
 import Kanban from '@/assets/kanban.jpg';
@@ -20,9 +23,11 @@ import Memory from '@/assets/memory.jpg';
 import {
   Card,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import Piano from './components/Piano';
 
 const SOCIALS_SIZE = 25;
 const TECH_SIZE = 25;
@@ -33,10 +38,7 @@ export default function Home() {
       <div>
         <div className="flex justify-between items-center mb-10 ">
           <span className="text-2xl font-semibold">BG</span>
-          <div className="flex justify-between items-center w-1/2">
-            <span>about</span>
-            <span>projects</span>
-            <span>contact</span>
+          <div className="flex justify-end items-center w-1/2">
             <ModeToggle />
           </div>
         </div>
@@ -89,27 +91,47 @@ export default function Home() {
           <div className="mt-2">Next.js</div>
         </div>
       </div>
+      <Piano />
       <WorkExperience />
+
       <div>
         <div className="text-3xl font-semibold mb-8">personal projects</div>
         <div className="flex justify-between gap-4">
           <Card className="w-1/2 shadow-md">
             <CardHeader>
-              <Image src={Kanban} alt="Kanban" className=" " />
+              <Image src={Kanban} alt="Kanban" className="rounded" />
               <CardTitle>Kanban Board</CardTitle>
               <CardDescription>
                 Drag and drop your tasks to organize your work flow
               </CardDescription>
             </CardHeader>
+            <CardFooter className="gap-2">
+              <Badge variant="outline" className="cursor-pointer">
+                <FiGithub />
+                Source
+              </Badge>
+              <Badge variant="outline" className="cursor-pointer">
+                <PiMonitor /> Live
+              </Badge>
+            </CardFooter>
           </Card>
           <Card className="w-1/2 shadow-md">
             <CardHeader>
-              <Image src={Memory} alt="Memory" className=" " />
+              <Image src={Memory} alt="Memory" className="rounded" />
               <CardTitle>Memory Game</CardTitle>
               <CardDescription>
                 Test your memory solo or with friends
               </CardDescription>
             </CardHeader>
+            <CardFooter className="gap-2">
+              <Badge variant="outline" className="cursor-pointer">
+                <FiGithub />
+                Source
+              </Badge>
+              <Badge variant="outline" className="cursor-pointer">
+                <PiMonitor /> Live
+              </Badge>
+            </CardFooter>
           </Card>
         </div>
       </div>
