@@ -1,7 +1,5 @@
 'use client';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { useState } from 'react';
 import JIF_Logo from '../../assets/JIF_Logo.jpg';
 import Shands_Logo from '../../assets/Shands.png';
 import Orchard from '../../assets/Orchard.jpg';
@@ -122,7 +120,7 @@ export default function WorkExperience() {
   }
 
   return (
-    <div>
+    <div className="h-[576px]">
       <Tabs defaultValue="account" className="">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="account">Work</TabsTrigger>
