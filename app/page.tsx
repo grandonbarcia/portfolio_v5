@@ -15,8 +15,11 @@ import WorkExperience from './components/WorkExperience';
 import Kanban from '@/assets/kanban.jpg';
 import Memory from '@/assets/memory.jpg';
 import MagneticIcon from './components/MagneticIcon';
-import Piano from './components/Piano';
+import Password from '@/assets/pwGen.jpg';
+// import Piano from './components/Piano';
 import ProjectCard from './components/ProjectCard';
+import { DM_Serif_Text } from 'next/font/google';
+
 import {
   Card,
   CardDescription,
@@ -27,9 +30,14 @@ import {
 const SOCIALS_SIZE = 25;
 const TECH_SIZE = 30;
 
+const dm_Serif_Text = DM_Serif_Text({
+  weight: '400',
+  subsets: ['latin'],
+});
+
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10 relative mx-auto mt-6 max-w-xl">
+    <div className="flex flex-col gap-16 relative mx-auto mt-6 max-w-xl">
       <div>
         <div className="flex justify-between items-center mb-10 ">
           <span className="text-2xl font-semibold">BG</span>
@@ -39,7 +47,9 @@ export default function Home() {
         </div>
         <div className="flex gap-8 justify-between">
           <div>
-            <h1 className="text-4xl font-semibold pb-4">
+            <h1
+              className={`${dm_Serif_Text.className} text-4xl font-semibold pb-4`}
+            >
               Hi Hi, I{`'`}m Brandon 👋
             </h1>
             <div className="pb-2">
@@ -178,22 +188,38 @@ export default function Home() {
       {/* <Piano /> */}
       <WorkExperience />
 
-      <div className="text-3xl font-semibold mb-8">personal projects</div>
+      <div>
+        <div
+          className={`${dm_Serif_Text.className} text-4xl font-semibold mb-6`}
+        >
+          personal projects
+        </div>
 
-      <ProjectCard
-        title={'Kanban Board'}
-        image={Kanban}
-        description={'Drag and drop your tasks to organize your work flow'}
-        github={'https://github.com/grandonbarcia/kanban-board.git'}
-        live={'https://merry-blini-eb0b20.netlify.app/'}
-      />
-      <ProjectCard
-        title={'Memory Game'}
-        image={Memory}
-        description={'Test your memory solo or with friends'}
-        github={'https://github.com/grandonbarcia/memory-game'}
-        live={'https://cheery-scone-e35758.netlify.app/'}
-      />
+        <div className="flex flex-col gap-8">
+          <ProjectCard
+            title={'Kanban Board'}
+            image={Kanban}
+            description={'Drag and drop your tasks to organize your work flow'}
+            github={'https://github.com/grandonbarcia/kanban-board.git'}
+            live={'https://merry-blini-eb0b20.netlify.app/'}
+          />
+          <ProjectCard
+            title={'Memory Game'}
+            image={Memory}
+            description={'Test your memory solo or with friends'}
+            github={'https://github.com/grandonbarcia/memory-game'}
+            live={'https://cheery-scone-e35758.netlify.app/'}
+          />
+          <ProjectCard
+            title={'Password Generator'}
+            image={Password}
+            description={'Need a new password? Look no further!'}
+            github={'https://github.com/grandonbarcia/password-generator'}
+            live={'https://silly-cheesecake-6453bb.netlify.app/'}
+          />
+        </div>
+      </div>
+
       <div className="border-t-2 pb-4">
         <div className="flex justify-between  pt-4">
           <div className="flex items-center">
