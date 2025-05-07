@@ -121,19 +121,23 @@ export default function WorkExperience() {
 
   return (
     <div className="h-[576px]">
-      <Tabs defaultValue="account" className="">
+      <Tabs defaultValue="Work" className="">
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="account">Work</TabsTrigger>
-          <TabsTrigger value="password">Education</TabsTrigger>
+          <TabsTrigger value="Work" className="cursor-pointer">
+            Work
+          </TabsTrigger>
+          <TabsTrigger value="Education" className="cursor-pointer">
+            Education
+          </TabsTrigger>
         </TabsList>
-        <TabsContent value="account">
+        <TabsContent value="Work">
           <Card>
             <CardContent className="space-y-2">
               <Work />
             </CardContent>
           </Card>
         </TabsContent>
-        <TabsContent value="password">
+        <TabsContent value="Education">
           <Card>
             <CardContent className="space-y-2">
               <Educ />
