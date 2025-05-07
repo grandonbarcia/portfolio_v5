@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useRef } from 'react';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
@@ -11,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import Kanban from '@/assets/kanban.jpg';
 
 import { Badge } from '@/components/ui/badge';
 import { PiMonitor } from 'react-icons/pi';
@@ -50,8 +48,10 @@ export default function ProjectCard({
     ['-7.5deg', '7.5deg']
   );
 
-  const handleMouseMove = (e: any) => {
-    const rect = e.target.getBoundingClientRect();
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const node = e.target as HTMLElement;
+
+    const rect = node.getBoundingClientRect();
 
     const width = rect.width;
     const height = rect.height;
@@ -66,7 +66,7 @@ export default function ProjectCard({
     y.set(yPct);
   };
 
-  const handleMouseLeave = (e: any) => {
+  const handleMouseLeave = () => {
     x.set(0);
     y.set(0);
   };
