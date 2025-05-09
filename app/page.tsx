@@ -161,28 +161,6 @@ export default function Home() {
             <CardDescription>Next.js</CardDescription>
           </CardHeader>
         </Card>
-
-        {/* <div className="group flex flex-col items-center justify-center border  rounded-2xl">
-          <SiTypescript
-            size={TECH_SIZE}
-            className="transition delay-150 duration-300 ease-in-out group-hover:-translate-y-1  group-hover:scale-110  group-hover:text-blue-500"
-          />
-          <div className="mt-2">Typescript</div>
-        </div>
-        <div className="group flex flex-col items-center justify-center border rounded-2xl">
-          <FaReact
-            size={TECH_SIZE}
-            className="transition delay-150 duration-300 ease-in-out group-hover:-translate-y-1  group-hover:scale-110  group-hover:text-blue-300"
-          />
-          <div className="mt-2">React.js</div>
-        </div>
-        <div className="group flex flex-col items-center justify-center border  rounded-2xl">
-          <RiNextjsFill
-            size={TECH_SIZE}
-            className="transition delay-150 duration-300 ease-in-out group-hover:-translate-y-1  group-hover:scale-110  "
-          />
-          <div className="mt-2">Next.js</div>
-        </div> */}
       </div>
 
       {/* <Piano /> */}
