@@ -12,10 +12,10 @@ import { RiTailwindCssFill } from 'react-icons/ri';
 import { PiCopyrightFill } from 'react-icons/pi';
 import Headshot from '@/assets/headshot.jpg';
 import WorkExperience from './components/WorkExperience';
-import Kanban from '@/assets/kanban.jpg';
+import Melodic from '@/assets/MM.jpg';
 import Memory from '@/assets/memory.jpg';
 import MagneticIcon from './components/MagneticIcon';
-import Password from '@/assets/pwGen.jpg';
+import TT from '@/assets/TT.jpg';
 // import Piano from './components/Piano';
 import ProjectCard from './components/ProjectCard';
 import { DM_Serif_Text } from 'next/font/google';
@@ -175,11 +175,11 @@ export default function Home() {
 
         <div className="flex flex-col gap-8">
           <ProjectCard
-            title={'Kanban Board'}
-            image={Kanban}
-            description={'Drag and drop your tasks to organize your work flow'}
-            github={'https://github.com/grandonbarcia/kanban-board.git'}
-            live={'https://merry-blini-eb0b20.netlify.app/'}
+            title={'Melodic Moments'}
+            image={Melodic}
+            description={'Listen to songs ad free at work!'}
+            github={'https://github.com/grandonbarcia/melodic-moments'}
+            live={'https://magical-douhua-499239.netlify.app/'}
           />
           <ProjectCard
             title={'Memory Game'}
@@ -189,11 +189,11 @@ export default function Home() {
             live={'https://cheery-scone-e35758.netlify.app/'}
           />
           <ProjectCard
-            title={'Password Generator'}
-            image={Password}
-            description={'Need a new password? Look no further!'}
-            github={'https://github.com/grandonbarcia/password-generator'}
-            live={'https://silly-cheesecake-6453bb.netlify.app/'}
+            title={'Typing Test'}
+            image={TT}
+            description={'Test your typing speed and accuracy!'}
+            github={'https://github.com/grandonbarcia/typing-test'}
+            live={'https://vigilant-spence-6f0b27.netlify.app/'}
           />
         </div>
       </div>
