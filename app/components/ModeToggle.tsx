@@ -10,10 +10,11 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   function ChangeTheme() {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
+    console.log('Changing theme from', theme);
+    if (theme === 'dark') {
       setTheme('light');
+    } else {
+      setTheme('dark');
     }
   }
 
