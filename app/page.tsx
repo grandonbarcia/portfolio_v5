@@ -37,7 +37,7 @@ const dm_Serif_Text = DM_Serif_Text({
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-16 relative mx-auto mt-6 max-w-xl">
+    <div className="flex flex-col gap-24 sm:gap-16 relative mx-auto mt-6 px-2 sm:px-0 sm:max-w-xl">
       <div>
         <div className="flex justify-between items-center mb-10 ">
           <span className="text-2xl font-semibold">BG</span>
@@ -116,7 +116,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="relative my-6 grid  grid-cols-4 gap-2  ">
+      <div className="relative my-6 grid  grid-cols-4 gap-2 text-center  ">
         <Card className="group">
           <CardHeader className="flex flex-col items-center justify-center">
             <CardTitle>
