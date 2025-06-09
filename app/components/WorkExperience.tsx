@@ -120,7 +120,7 @@ export default function WorkExperience() {
   }
 
   return (
-    <div className="h-[576px]">
+    <div className="h-[80vh] sm:h-[60vh] overflow-y-auto">
       <Tabs defaultValue="Work" className="">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="Work" className="cursor-pointer">

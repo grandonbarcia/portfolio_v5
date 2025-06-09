@@ -37,7 +37,7 @@ const dm_Serif_Text = DM_Serif_Text({
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-24 sm:gap-16 relative mx-auto mt-6 px-2 sm:px-0 sm:max-w-xl">
+    <div className="flex flex-col gap-12 sm:gap-24 sm:gap-16 relative mx-auto mt-6 px-2 sm:px-0 sm:max-w-xl">
       <div>
         <div className="flex justify-between items-center mb-10 ">
           <span className="text-2xl font-semibold">BG</span>
@@ -45,7 +45,7 @@ export default function Home() {
             <ModeToggle />
           </div>
         </div>
-        <div className="flex gap-8 justify-between">
+        <div className="flex flex-col sm:flex-row gap-8 justify-between">
           <div>
             <h1
               className={`${dm_Serif_Text.className} text-4xl font-semibold pb-4`}
@@ -112,7 +112,7 @@ export default function Home() {
           <Image
             src={Headshot}
             alt="headshot"
-            className="w-36 h-36 rounded-full object-cover"
+            className="mx-auto order-first sm:mx-0 sm:order-none w-36 h-36 rounded-full object-cover"
           />
         </div>
       </div>
