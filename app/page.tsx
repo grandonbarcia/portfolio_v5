@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-8 justify-between">
-          <div>
+          <div className="text-center sm:text-left ">
             <h1
               className={`${dm_Serif_Text.className} text-4xl font-semibold pb-4`}
             >
@@ -59,14 +59,14 @@ export default function Home() {
               I’m all about crafting interactive front-end apps, jamming out on
               my piano, and surviving on way too much coffee.
             </div>
-            <div className="flex items-center gap-2 font-semibold">
+            <div className="flex items-center justify-center sm:justify-start gap-2 font-semibold ">
               <span className="relative flex size-3">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex size-3 rounded-full bg-green-500"></span>
               </span>
               <span className="underline">Available for work</span>
             </div>
-            <div className="flex items-center gap-8 mt-10 ">
+            <div className="flex items-center justify-center sm:justify-start gap-8 mt-10 ">
               <a
                 href="/resume.pdf"
                 target="_blank"
