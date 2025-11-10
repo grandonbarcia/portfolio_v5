@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center sm:justify-start gap-8 mt-10 ">
               <a
-                href="/resume.pdf"
+                href="/Brandon_Garcia_Resume.pdf"
                 target="_blank"
                 rel="noopener"
                 className="cursor-pointer"
