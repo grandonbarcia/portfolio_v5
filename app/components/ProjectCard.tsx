@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 import {
   Card,
   CardDescription,
@@ -49,9 +49,7 @@ export default function ProjectCard({
   );
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const node = e.target as HTMLElement;
-
-    const rect = node.getBoundingClientRect();
+    const rect = e.currentTarget.getBoundingClientRect();
 
     const width = rect.width;
     const height = rect.height;
@@ -93,6 +91,8 @@ export default function ProjectCard({
             src={image}
             alt="project image"
             className="rounded-2xl shadow "
+            placeholder="blur"
+            sizes="(max-width: 640px) 100vw, 640px"
           />
           <CardTitle
             style={{
@@ -115,21 +115,19 @@ export default function ProjectCard({
           }}
           className="gap-2"
         >
-          <a href={github} target="_blank">
+          <a href={github} target="_blank" rel="noopener noreferrer">
             <Badge variant="outline" className="cursor-pointer">
               <FiGithub />
               Source
             </Badge>
           </a>
-          <a href={live} target="_blank">
+          <a href={live} target="_blank" rel="noopener noreferrer">
             <Badge variant="outline" className="cursor-pointer">
               <PiMonitor /> Live
             </Badge>
           </a>
         </CardFooter>
       </Card>
-
-      {/* </div> */}
     </motion.div>
   );
 }

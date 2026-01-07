@@ -143,6 +143,8 @@ export default function Home() {
               alt="Brandon Garcia headshot"
               className="mx-auto order-first sm:mx-0 sm:order-none w-36 h-36 rounded-full object-cover"
               priority
+              placeholder="blur"
+              sizes="(max-width: 640px) 144px, 144px"
             />
           </div>
         </section>

@@ -21,6 +21,8 @@ export default function WorkExperience() {
             src={JIF_Logo}
             alt="JIF LOGO"
             className="w-12 h-12 rounded-full object-cover"
+            placeholder="blur"
+            sizes="48px"
           />
           <div className="flex flex-col">
             <CardDescription>Aug. 2021 - Present</CardDescription>
@@ -48,6 +50,8 @@ export default function WorkExperience() {
             src={Shands_Logo}
             alt="Shands Logo"
             className="w-12 h-12 rounded-full object-cover"
+            placeholder="blur"
+            sizes="48px"
           />
           <div className="flex flex-col">
             <CardDescription>Apr. 2015 - Apr. 2020</CardDescription>
@@ -76,6 +80,8 @@ export default function WorkExperience() {
             src={Orchard}
             alt="Orchard Logo"
             className="w-12 h-12 rounded-full object-cover"
+            placeholder="blur"
+            sizes="48px"
           />
           <div className="flex flex-col">
             <CardDescription>Oct. 2018 - Sept. 2019</CardDescription>
@@ -108,6 +114,8 @@ export default function WorkExperience() {
             src={Seal_of_Santa_Fe_College}
             alt="Sante Fe College Logo"
             className="w-12 h-12 rounded-full object-cover"
+            placeholder="blur"
+            sizes="48px"
           />
           <div className="flex flex-col">
             <CardDescription>Dec. 2018</CardDescription>
