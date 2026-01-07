@@ -7,9 +7,10 @@ import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 import { PiCopyrightFill } from 'react-icons/pi';
 import Headshot from '@/assets/headshot.jpg';
 import WorkExperience from './components/WorkExperience';
-import Melodic from '@/assets/MM.jpg';
+import RouteRank from '@/assets/Routerank.png';
+import Thryve from '@/assets/Thryve.png';
 import Memory from '@/assets/memory.jpg';
-import TT from '@/assets/TT.jpg';
+
 import ProjectCard from './components/ProjectCard';
 import SocialLinks from './components/SocialLinks';
 import { DM_Serif_Text } from 'next/font/google';
@@ -55,6 +56,32 @@ const jsonLd = {
 };
 
 export default function Home() {
+  const projects = [
+    {
+      title: 'Thryve ',
+      image: Thryve,
+      description:
+        'Track nutrition, monitor vitals, log workouts, and connect with a community committed to healthier lifestyles',
+      github: 'https://github.com/grandonbarcia/health-tracker',
+      live: 'https://magical-douhua-499239.netlify.app/',
+    },
+    {
+      title: 'RouteRank',
+      image: RouteRank,
+      description:
+        'We analyze your entire Next.js stack for optimization opportunities.We understand App Routers, metadata APIs, and performance. Get actionable insights that turn into real growth.',
+      github: 'https://github.com/grandonbarcia/typing-test',
+      live: 'https://velvety-queijadas-681bfb.netlify.app/',
+    },
+    {
+      title: 'Memory Game',
+      image: Memory,
+      description: 'Test your memory solo or with friends',
+      github: 'https://github.com/grandonbarcia/memory-game',
+      live: 'https://genuine-sable-bf0933.netlify.app/',
+    },
+  ];
+
   return (
     <>
       <script
@@ -183,27 +210,16 @@ export default function Home() {
           </h2>
 
           <div className="flex flex-col gap-8">
-            <ProjectCard
-              title={'Melodic Moments'}
-              image={Melodic}
-              description={'Listen to songs ad free at work!'}
-              github={'https://github.com/grandonbarcia/melodic-moments'}
-              live={'https://magical-douhua-499239.netlify.app/'}
-            />
-            <ProjectCard
-              title={'Memory Game'}
-              image={Memory}
-              description={'Test your memory solo or with friends'}
-              github={'https://github.com/grandonbarcia/memory-game'}
-              live={'https://cheery-scone-e35758.netlify.app/'}
-            />
-            <ProjectCard
-              title={'Typing Test'}
-              image={TT}
-              description={'Test your typing speed and accuracy!'}
-              github={'https://github.com/grandonbarcia/typing-test'}
-              live={'https://vigilant-spence-6f0b27.netlify.app/'}
-            />
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                image={project.image}
+                description={project.description}
+                github={project.github}
+                live={project.live}
+              />
+            ))}
           </div>
         </section>
 
