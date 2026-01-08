@@ -63,14 +63,14 @@ export default function Home() {
       description:
         'Track nutrition, monitor vitals, log workouts, and connect with a community committed to healthier lifestyles',
       github: 'https://github.com/grandonbarcia/health-tracker',
-      live: 'https://magical-douhua-499239.netlify.app/',
+      live: 'https://genuine-sable-bf0933.netlify.app/',
     },
     {
       title: 'RouteRank',
       image: RouteRank,
       description:
         'We analyze your entire Next.js stack for optimization opportunities.We understand App Routers, metadata APIs, and performance. Get actionable insights that turn into real growth.',
-      github: 'https://github.com/grandonbarcia/typing-test',
+      github: 'https://github.com/grandonbarcia/routerank',
       live: 'https://velvety-queijadas-681bfb.netlify.app/',
     },
     {
