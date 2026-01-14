@@ -69,7 +69,7 @@ export default function Home() {
       title: 'RouteRank',
       image: RouteRank,
       description:
-        'We analyze your entire Next.js stack for optimization opportunities.We understand App Routers, metadata APIs, and performance. Get actionable insights that turn into real growth.',
+        'We analyze your entire Next.js stack for optimization opportunities. We understand App Routers, metadata APIs, and performance. Get actionable insights that turn into real growth.',
       github: 'https://github.com/grandonbarcia/routerank',
       live: 'https://velvety-queijadas-681bfb.netlify.app/',
     },
